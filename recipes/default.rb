@@ -5,6 +5,8 @@
 #
 
 include_recipe "seal-cookbook::install_deps"
+include_recipe "pydoop-cookbook"
+include_recipe "hadoop-BAM-cookbook"
 include_recipe "git"
 
 #Checkot biodoop-seal-code from Git
