@@ -4,6 +4,13 @@
 #
 #
 
+ruby_block 'Loas attributes from hadooop-BAM recipe' do
+  block do
+    node.from_file(run_context.resolve_attribute("hadoop-BAM-cookbook", "default.rb"))
+  end
+  action :nothing
+end
+
 include_recipe "seal-cookbook::install_deps"
 include_recipe "pydoop-cookbook"
 include_recipe "hadoop-BAM-cookbook"
